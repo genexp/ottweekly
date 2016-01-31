@@ -6,8 +6,8 @@
 		<link rel="icon" type="image/png" href="/assets/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>OTT Weekly</title>
-		<link rel="stylesheet" href="/main.css">
-		<script src="/modernizr.js"></script>
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<script src="/assets/js/modernizr.js"></script>
 	{% endblock %}
 </head>
 <body id="{{ class }}">
@@ -20,11 +20,13 @@
 					<a href="/" class="issues">Home</a><span class="divider">|</span>
 					<a href="/archives" class="issues">Archives</a><span class="divider">|</span>
 					<!-- <a href="/search" class="search">Search</a><span class="divider">|</span> -->
-					<a href="/latest" class="latest">Latest Issue</a><span class="divider"><!--|</span>-->
-					<!-- <a href="/rss/1a0jcekb">RSS</a> -->
+					{% for issue in collections.archives|slice(0,1) %}
+		        <a href="/{{ issue.path }}" class="latest">Latest Issue</a><span class="divider">|</span>
+		      {% endfor %}
+					<a href="/rss/1a0jcekb">RSS</a>
 				</div>
 			</nav>
-			<img src="/assets/img/logo.png" alt="Laravel Weekly">
+			<img src="/assets/img/logo.png" alt="OTT Weekly">
 
 		</header>
 
@@ -35,7 +37,6 @@
 		{% if next %}
 			<a href="/{{ next.path }}">Next: {{ next.title }}</a>
 		{% endif %}
-
 		<main>
 			{% block content %}
 				{{ contents }}
