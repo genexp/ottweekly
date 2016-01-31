@@ -1,0 +1,48 @@
+{
+  "name": "ottweekly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "bucketful": "^0.15.4",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-metalsmith": "0.0.3",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-sass": "^2.0.4",
+    "gulp-svgmin": "^1.2.0",
+    "gulp-svgstore": "^5.0.4",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-feed": "^0.2.0",
+    "metalsmith-html-minifier": "^1.1.0",
+    "metalsmith-in-place": "^1.3.3",
+    "metalsmith-layouts": "^1.4.4",
+    "metalsmith-lunr": "^0.2.1",
+    "metalsmith-markdown-remarkable": "^0.1.1",
+    "metalsmith-paths": "^2.1.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-sitemap": "^1.0.0",
+    "metalsmith-twig": "joecritch/metalsmith-twig",
+    "run-sequence": "^1.1.4"
+  },
+  "scripts": {
+    "start": "gulp",
+    "deploy": "bucketful"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genexp/LaravelWeekly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genexp/LaravelWeekly/issues"
+  },
+  "homepage": "https://github.com/genexp/LaravelWeekly#readme"
+}

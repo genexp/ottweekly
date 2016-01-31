@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="/assets/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OTT Weekly</title>
+		<link rel="stylesheet" href="/main.css">
+		<script src="/modernizr.js"></script>
+	{% endblock %}
+</head>
+<body id="{{ class }}">
+	<div class="container">
+		<header>
+			<nav>
+				<div class="sitename" style="cursor: pointer" onclick="window.location.href='/'"><a href="/">OTT Weekly</a></div>
+
+				<div class="items">
+					<a href="/" class="issues">Home</a><span class="divider">|</span>
+					<a href="/archives" class="issues">Archives</a><span class="divider">|</span>
+					<!-- <a href="/search" class="search">Search</a><span class="divider">|</span> -->
+					<a href="/latest" class="latest">Latest Issue</a><span class="divider"><!--|</span>-->
+					<!-- <a href="/rss/1a0jcekb">RSS</a> -->
+				</div>
+			</nav>
+			<img src="/assets/img/logo.png" alt="Laravel Weekly">
+
+		</header>
+
+		{% if previous %}
+		  <a href="/{{ previous.path }}">Previous: {{ previous.title }}</a>
+		{% endif %}
+
+		{% if next %}
+			<a href="/{{ next.path }}">Next: {{ next.title }}</a>
+		{% endif %}
+
+		<main>
+			{% block content %}
+				{{ contents }}
+			{% endblock %}
+	 	</main>
+
+		<footer>
+			<p>&copy; 2016 OTT Weekly &bull; <a href="http://www.ottweekly.com">OTT Weekly</a> &bull; <a href="https://twitter.com/ottweekly">Twitter</a></p>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-68853545-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

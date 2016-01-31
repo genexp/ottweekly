@@ -40,15 +40,45 @@ h2 {
 /* Container
 ---------------------------------------------------------*/
 
-#container {
+.container {
     margin: 0 auto;
     max-width: 550px;
 }
 
-#container img {
+.container img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+}
+
+/* Header
+---------------------------------------------------------*/
+header {
+  div.sitename {
+    text-transform: none;
+    font-size: 27px;
+    float: left;
+    line-height: 1.0em;
+    font-weight: 500;
+    text-shadow: 2px 2px 0px #eee;
+  }
+
+  nav {
+    padding: 12px;
+    font-size: 15px;
+
+    text-transform: uppercase;
+    line-height: 1.3em;
+    text-align: right;
+    color: #ccc;
+    position: relative;
+    a {
+      text-decoration: none;
+      padding: 0 14px 0 12px;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
 }
 
 /* Form
@@ -76,21 +106,34 @@ h2 {
 /* Past Issues
 ---------------------------------------------------------*/
 
-#past-issues {
+section#archive {
     width: 100%;
 }
-#past-issues th {
+section#archive th {
     text-align: left;
 }
-#past-issues tr th:last-child,
-#past-issues tr td:last-child {
+section#archive tr th:last-child,
+section#archive tr td:last-child {
     text-align: center;
 }
 
 /* Footer
 ---------------------------------------------------------*/
 
-.footer {
+footer p {
     font-size: .8em;
     text-align: center;
+}
+
+
+/* Pages
+---------------------------------------------------------*/
+
+body#index {
+  header .sitename {
+    display: none;
+  }
+  header nav {
+    text-align: center;
+  }
 }
